@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import sabinePortrait from '@/public/assets/sabineportrait.png'
+import { useGlobal } from '@/app/context/stateContext';
 
 export default function Page() {
+    const {state} = useGlobal();
+    
     return (
         <div>
             <div>
