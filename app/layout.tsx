@@ -3,13 +3,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SideNav from '@/app/ui/sidenav';
-import { GlobalProvider } from "./context/stateContext";
+import { NavStateProvider } from "./context/stateContext";
 
 export default function RootLayout({ children }: { children: React.ReactNode;}) {
 
 
   return (
-    <GlobalProvider >
+    <NavStateProvider >
        <html lang="en">
         <body>
           <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
         </div>
       </body>
     </html>
-    </GlobalProvider>
+    </NavStateProvider>
 
   );
 }

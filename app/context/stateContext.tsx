@@ -2,9 +2,9 @@
 
 import { createContext, useContext, useState } from 'react';
 
-const renderContext = createContext<any | null>(null);
+const renderContext = createContext<unknown | null>(null);
 
-export function GlobalProvider({children}: {children: React.ReactNode}) {
+export function NavStateProvider({children}: {children: React.ReactNode}) {
     const [state, setState] = useState("Art Illustrations");
 
     return (

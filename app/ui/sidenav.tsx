@@ -2,8 +2,8 @@
 import Link from 'next/link';
 import SabineLogo from '@/app/ui/sabineLogo';
 import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
-import { useState, useContext, createContext } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 import { useGlobal } from '@/app/context/stateContext';
 
 const links = [
@@ -15,12 +15,11 @@ const links = [
 ]
 
 export default function SideNav() {
+
   const [rendering, setRendering] = useState('Food Illustrations');
   const { state, setState } = useGlobal();
 
-  const pathname = usePathname();
 
-  console.log(state)
 
     function handleRendering(link: any) {
       setRendering(link);

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { useGlobal } from '@/app/context/stateContext'
+import { useState, useEffect } from 'react';
+import { useGlobal } from '@/app/context/stateContext';
+import { useRouter } from 'next/router';
 
 export default function Page() {
   const [rendering, setRendering] = useState("Selected");
