@@ -1,16 +1,14 @@
 import Image from 'next/image';
 import sabinePortrait from '@/public/assets/sabineportrait.png'
-import { useGlobal } from '@/app/context/stateContext';
 
 export default function Page() {
-    const {state} = useGlobal();
-    
+
     return (
         <div>
             <div>
                 <Image src={sabinePortrait}
-                alt="self portrait of Andreia de matos" 
-                
+                alt="self portrait of Andreia de matos"
+
                 />
             </div>
             <div>

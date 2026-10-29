@@ -4,6 +4,7 @@ import SabineLogo from '@/app/ui/sabineLogo';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useState, useContext, createContext } from 'react';
+import { useGlobal } from '@/app/context/stateContext';
 
 const links = [
     { name: 'Hello', href: '/hello', icon: null },
@@ -14,12 +15,16 @@ const links = [
 ]
 
 export default function SideNav() {
-    const [rendering, setRendering] = useState('Food Illustrations');
+  const [rendering, setRendering] = useState('Food Illustrations');
+  const { state, setState } = useGlobal();
 
-    const pathname = usePathname();
-    
+  const pathname = usePathname();
+
+  console.log(state)
+
     function handleRendering(link: any) {
-        setRendering(link);
+      setRendering(link);
+      setState(link);
     }
 
     return(
@@ -29,16 +34,16 @@ export default function SideNav() {
             className="mb-2 flex h-20 items-end justify-center rounded-md bg-blue-500 p-4 md:h-40"
             href="/"
         >
-            <div className="w-32 text-white md:w-40"> 
+            <div className="w-32 text-white md:w-40">
                 <SabineLogo />
             </div>
         </Link>
 
         <div className="flex grow flex-grow justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-            
+
             {links.map((link) => {
                 return (
-                        
+
                     <Link
                         onClick={() => handleRendering(link.name)}
                         key={link.name}
@@ -54,7 +59,7 @@ export default function SideNav() {
                 );
             })}
 
-            <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block" 
+            <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"
             >
             </div>
         </div>

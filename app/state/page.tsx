@@ -8,17 +8,12 @@ export default function Page() {
   const {state} = useGlobal();
 
     function renderFood() {
-        setRendering("Food");
+      setRendering("Food");
   };
 
     function renderSelected() {
         setRendering("Selected");
   };
-
-  function renderHello() {
-    setRendering(state)
-    logThis()
-  }
 
     function logThis() {
         console.log(state)
@@ -36,8 +31,8 @@ export default function Page() {
             clicke me to render selected
         </button>
 
-        <button onClick={renderHello} >
-          click me to see something please
+        <button onClick={logThis} >
+          click me to see what state the system is currently in
         </button>
 
         <p>we are now rendering {rendering} </p>

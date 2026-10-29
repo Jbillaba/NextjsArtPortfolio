@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from 'react';
 const renderContext = createContext<any | null>(null);
 
 export function GlobalProvider({children}: {children: React.ReactNode}) {
-    const [state, setState] = useState("Hello");
+    const [state, setState] = useState("Art Illustrations");
 
     return (
       <renderContext.Provider value={{ state, setState }} >
