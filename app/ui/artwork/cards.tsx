@@ -5,19 +5,19 @@ import { Artwork } from '@/app/lib/definitions';
 export default async function CardWrapper() {
     // this is a state variable which should be retrieved from elsewhere, or maybe not we'll figure it out how.
     const artworks = await fetchFoodIllustrations();
-    {/* 
-        
+    {/*
+
         //the idea is as simple as this
-        grab the state from navbar 
-        if render = Food artwork 
+        grab the state from navbar
+        if render = Food artwork
             artworks = await fetchFood
-            
+
         if render = Selected artwork
             artworks = await fetchSelected
 
-        
+
         the issue comes from having to figure out how to access the state from sidenav within this one we only want to read the state not set anything
-        
+
     */}
 
     return (
@@ -33,7 +33,8 @@ export default async function CardWrapper() {
                     height={600}
                     width={500}
                     className=""
-                /> 
+                    loading="eager"
+                />
                 </div>
             ))}
         </div>

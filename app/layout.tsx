@@ -9,20 +9,20 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
 
 
   return (
-    <GlobalProvider>
+    <GlobalProvider >
        <html lang="en">
-        <body> 
+        <body>
           <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
             <div className="w-full flex-none md:w-64">
               <SideNav />
             </div>
             <div className="grow p-6 md:overflow-y-auto md:p-12">
-              {children} 
+              {children}
             </div>
         </div>
       </body>
     </html>
     </GlobalProvider>
-     
+
   );
 }

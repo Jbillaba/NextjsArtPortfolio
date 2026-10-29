@@ -5,7 +5,7 @@ import { useGlobal } from '@/app/context/stateContext'
 
 export default function Page() {
   const [rendering, setRendering] = useState("Selected");
-  const [state] = useGlobal();
+  const {state} = useGlobal();
 
     function renderFood() {
         setRendering("Food");
@@ -17,6 +17,7 @@ export default function Page() {
 
   function renderHello() {
     setRendering(state)
+    logThis()
   }
 
     function logThis() {

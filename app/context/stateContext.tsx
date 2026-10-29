@@ -8,7 +8,7 @@ export function GlobalProvider({children}: {children: React.ReactNode}) {
     const [state, setState] = useState("Hello");
 
     return (
-        <renderContext.Provider value={state, setState} >
+      <renderContext.Provider value={{ state, setState }} >
             {children}
         </renderContext.Provider>
     )
