@@ -4,7 +4,6 @@ import SabineLogo from '@/app/ui/sabineLogo';
 import clsx from 'clsx';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
-import { useGlobal } from '@/app/context/stateContext';
 
 const links = [
     { name: 'Hello', href: '/hello', icon: null },
@@ -17,7 +16,6 @@ const links = [
 export default function SideNav() {
 
   const [rendering, setRendering] = useState('Food Illustrations');
-  const { state, setState } = useGlobal();
 
 
 

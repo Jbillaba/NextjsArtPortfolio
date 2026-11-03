@@ -1,44 +1,25 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useGlobal } from '@/app/context/stateContext';
-import { useRouter } from 'next/router';
+import { parseAsInteger, useQueryState } from 'nuqs';
 
 export default function Page() {
-  const [rendering, setRendering] = useState("Selected");
-  const {state} = useGlobal();
+  const [counter, setCounter] = useQueryState(
+    'counter',
+    parseAsInteger.withDefault(0)
+  )
 
-    function renderFood() {
-      setRendering("Food");
-  };
+  return (
+    <>
+      <div className='my-8 flex flex-wrap items-center gap-4' >
+        <button onClick={() => setCounter(x => x - 1)} > click me to decrease</button>
 
-    function renderSelected() {
-        setRendering("Selected");
-  };
+        <button onClick={() => setCounter(x => x + 1)} > click me to increase</button>
 
-    function logThis() {
-        console.log(state)
-    };
+        <button onClick={() => setCounter(null)} > click me to reset count</button>
 
-    return (
+        <span className='text-2xl font-semibold tabulartabular-nums' > Counter: {counter}</span>
 
-        <div className="flex space-x-10">
-
-        <button onClick={renderFood}>
-            click me to render food
-        </button>
-
-        <button onClick={renderSelected}>
-            clicke me to render selected
-        </button>
-
-        <button onClick={logThis} >
-          click me to see what state the system is currently in
-        </button>
-
-        <p>we are now rendering {rendering} </p>
-
-        </div>
-
-    )
+      </div>
+    </>
+  )
 }
