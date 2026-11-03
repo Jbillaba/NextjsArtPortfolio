@@ -3,10 +3,7 @@
 import { useQueryState } from "nuqs";
 
 export default function StateUI() {
-  const [render, setRender] = useQueryState(
-    'render',
-    {defaultValue: 'food'}
-  )
+  const [render, setRender] = useQueryState("render");
   return (
     <>
       <div className='my-8 flex flex-wrap items-center gap-4' >

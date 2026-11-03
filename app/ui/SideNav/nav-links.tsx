@@ -12,8 +12,10 @@ const links = [
     { name: 'Design', href: '/design', icon: null },
     { name: 'Shop', href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', icon: null }
 ]
+
 export default function NavLinks() {
   const [rendering, setRendering] = useState('Food Illustrations');
+  const [viewing, setViewing] = useQueryState('viewing');
 
   function handleRendering(link: string) {
     setRendering(link);
