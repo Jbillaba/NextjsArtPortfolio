@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import SideNav from '@/app/ui/sidenav';
+import SideNav from '@/app/ui/SideNav/sidenav';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 export default function RootLayout({ children }: { children: React.ReactNode;}) {
