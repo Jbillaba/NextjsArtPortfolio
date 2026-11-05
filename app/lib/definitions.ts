@@ -6,3 +6,10 @@ export type Artwork = {
     image: string;
     caption: string;
 }
+
+export type Links = {
+  name: string;
+  href: string;
+  icon: string;
+  state: string;
+}
