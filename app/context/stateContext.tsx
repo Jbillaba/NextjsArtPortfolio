@@ -2,10 +2,16 @@
 
 import { createContext, useContext, useState } from 'react';
 
-const renderContext = createContext<unknown | null>(null);
+interface GlobalContextType {
+    state: string;
+    setState: (state: string) => void;
+}
+
+
+const renderContext = createContext<GlobalContextType | null>(null);
 
 export function NavStateProvider({children}: {children: React.ReactNode}) {
-    const [state, setState] = useState("Art Illustrations");
+    const [state, setState] = useState("Food Illustrations");
 
     return (
       <renderContext.Provider value={{ state, setState }} >

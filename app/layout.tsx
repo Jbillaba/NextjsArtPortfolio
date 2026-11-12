@@ -4,12 +4,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SideNav from '@/app/ui/SideNav/sidenav';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+import { NavStateProvider, useGlobal } from "./context/stateContext";
 
 export default function RootLayout({ children }: { children: React.ReactNode;}) {
 
 
   return (
-    <NuqsAdapter >
+    <NavStateProvider>
        <html lang="en">
         <body>
           <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
         </div>
       </body>
     </html>
-    </NuqsAdapter>
+    </NavStateProvider>
 
   );
 }
