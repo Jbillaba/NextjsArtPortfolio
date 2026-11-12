@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
-import CardWrapper from '@/app/ui/artwork/cards';
+import ArtCards from '@/app/ui/artwork/cards';
 import { ArtworkSkeleton } from '@/app/ui/skeletons';
+import { fetchFoodIllustrations } from '@/app/lib/data';
+
 
 export default async function Page() {
-
     return (
         <div>
             <Suspense fallback={<ArtworkSkeleton />}>
-                <CardWrapper />
+                <ArtCards />
             </Suspense>
         </div>
     );

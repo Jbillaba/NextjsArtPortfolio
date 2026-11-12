@@ -1,23 +1,8 @@
 import fsPromises from 'fs/promises';
 import path from 'path';
-
-{/*
-  were gonna keep logic related to logic in its component, we need to write a function here that can read the state of the system and make the appropiate call
-
-  DynamicallyRenderArtwork
-  ..psuedocode
-  export function DynamicallyRenderArtwork() {
-  switch case "food illustrations":
-    fetchFoodIllustrations();
-    break
-  case "selected illustrations":
-    fetchSelectedIllustrations();
-    break;
-  defualt "FoodIllustration"
+  interface stateType {
+    state: string;
   }
-
-  */}
-
 
 export async function fetchFoodIllustrations(){
     try {

@@ -12,18 +12,19 @@ const links = [
     { name: 'Shop', href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', icon: null }
 ]
 
+interface linkType {
+  name: string;
+} 
+
 export default function NavLinks() {
   const {state, setState} = useGlobal();
   
-  function handleState(link) {
+  function handleState(link: linkType) {
       setState(link.name)
   }
 
   return (
     <>
-    <div className={clsx('flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3')} >
-      <p> current state is {state}</p>
-    </div>
       {links.map((link) => {
         return (
           <Link

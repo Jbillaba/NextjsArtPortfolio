@@ -1,16 +1,13 @@
 'use client';
-
-import type { Metadata } from "next";
 import "./globals.css";
 import SideNav from '@/app/ui/SideNav/sidenav';
-import { NuqsAdapter } from 'nuqs/adapters/next/app';
-import { NavStateProvider, useGlobal } from "./context/stateContext";
+import { Providers } from "./context/providers";
 
 export default function RootLayout({ children }: { children: React.ReactNode;}) {
 
 
   return (
-    <NavStateProvider>
+    <Providers>
        <html lang="en">
         <body>
           <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
@@ -23,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
         </div>
       </body>
     </html>
-    </NavStateProvider>
+    </Providers>
 
   );
 }
