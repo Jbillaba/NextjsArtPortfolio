@@ -1,11 +1,8 @@
 'use client';
 
-import { useQueryState } from "nuqs";
-import { useState } from "react";
-import { useGlobal } from "@/app/context/stateContext"; 
+import { useGlobal } from "@/app/context/stateContext";
 
 export default function StateUI() {
-  const [render, setRender] = useState("render");
   const {state, setState} = useGlobal()
 
   return (
@@ -19,7 +16,6 @@ export default function StateUI() {
 
         <button value={5} onClick={() => setState('something')} > click to set render to something </button>
 
-        <span> System is now set to { render }</span>
       </div>
     </>
   )

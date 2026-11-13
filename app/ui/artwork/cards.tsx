@@ -1,17 +1,19 @@
+'use client';
+
 import { use } from 'react';
 import Image from 'next/image';
-import { fetchFoodIllustrations } from '@/app/lib/data';
 import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
 
-export default async function ArtCards() {
-    const artworks = await fetchFoodIllustrations();
-    
+export default function ArtCards({ data }: { data: Promise<any[]> }) {
+  const { state, setState } = useGlobal();
+
+  const artworks = use(data);
   return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4" >
-                {artworks?.map((artwork: Artwork) => (
-                <div key={artwork.id} className="grid gap-1"> {/* this encapsulates a card, use this for the background */}
-                <div className=""> {/* this is for the space between the image and background bordering, i think im explaining that right */}
+          {artworks?.map((artwork: Artwork) => (
+                <div key={artwork.id} className="grid gap-1">
+                <div className="">
                 </div>
                     <Image
                     src={artwork.image}
