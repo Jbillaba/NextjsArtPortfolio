@@ -2,19 +2,28 @@ import { Suspense } from 'react';
 import ArtCards from '@/app/ui/artwork/cards';
 import { ArtworkSkeleton } from '@/app/ui/skeletons';
 import { fetchFoodIllustrations, fetchSelectedIllustrations } from '@/app/lib/data';
-// we keep this as a server component and fetch the data here and pass the data along into art cards
-// however we need to ensure the client component can differentiate states
-async function getArtworks() {
+
+async function getFoodArtworks() {
   const res = await fetchFoodIllustrations();
   return res
 }
 
+async function getSelectedArtworks() {
+  const res = await fetchSelectedIllustrations();
+  return res
+}
+
 export default async function Page() {
-  const data = getArtworks();
+
+  const [foodArt, SelectedArt] = [
+    getFoodArtworks(),
+    getSelectedArtworks(),
+  ]
+
     return (
         <div>
             <Suspense fallback={<ArtworkSkeleton />}>
-              <ArtCards data={ data }  />
+              <ArtCards foodData={ foodArt } selectedData={SelectedArt}  />
             </Suspense>
         </div>
     );

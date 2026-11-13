@@ -1,10 +1,7 @@
 import fsPromises from 'fs/promises';
 import path from 'path';
-  interface stateType {
-    state: string;
-  }
 
-export async function fetchFoodIllustrations(){
+export async function fetchFoodIllustrations() {
     try {
         const filePath = path.join(process.cwd(), '/json/FoodIllustration.json');
         const jsonData = await fsPromises.readFile(filePath);

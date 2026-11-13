@@ -5,10 +5,13 @@ import Image from 'next/image';
 import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
 
-export default function ArtCards({ data }: { data: Promise<any[]> }) {
+export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
 
-  const artworks = use(data);
+  let artworks = use(foodData);
+
+  if (state != "Food Illustrations") artworks = use(selectedData)
+
   return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4" >
           {artworks?.map((artwork: Artwork) => (
