@@ -4,6 +4,7 @@ import { use } from 'react';
 import Image from 'next/image';
 import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
+import { MasonryInfiniteGrid } from "@egjs/react-infinitegrid";
 
 export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
@@ -12,8 +13,10 @@ export default function ArtCards({ foodData, selectedData }) {
 
   if (state != "Food Illustrations") artworks = use(selectedData)
 
-  return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4" >
+  return <MasonryInfiniteGrid
+    className="container"
+    gap={5}
+  >
           {artworks?.map((artwork: Artwork) => (
                 <div key={artwork.id} className="grid gap-1">
                 <div className="">
@@ -21,14 +24,12 @@ export default function ArtCards({ foodData, selectedData }) {
                     <Image
                     src={artwork.image}
                     alt={artwork.caption}
-                    height={600}
-                    width={500}
+                    height={0}
+                    width={250}
                     className=""
                     loading="eager"
                 />
                 </div>
             ))}
-        </div>
-
-      )
+      </MasonryInfiniteGrid >;
 }

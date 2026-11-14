@@ -2,23 +2,24 @@
 
 import Link from 'next/link';
 import clsx from 'clsx';
-import { useGlobal } from '@/app/context/stateContext'; 
+import { useGlobal } from '@/app/context/stateContext';
 
 const links = [
     { name: 'Hello', href: '/hello', icon: null },
     { name: 'Food Illustrations', href: '/artwork', icon: null, state: 'Food', },
     { name: 'Selected Artworks', href:'/artwork', icon: null, state: 'Selected', },
     { name: 'Design', href: '/design', icon: null },
-    { name: 'Shop', href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', icon: null }
+    // { name: 'Shop', href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', icon: null }
+    // nixxing this for now, dont even have a shop set up
 ]
 
 interface linkType {
   name: string;
-} 
+}
 
 export default function NavLinks() {
   const {state, setState} = useGlobal();
-  
+
   function handleState(link: linkType) {
       setState(link.name)
   }

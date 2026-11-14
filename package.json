@@ -17,6 +17,8 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@egjs/infinitegrid": "^4.13.1",
+    "@egjs/react-infinitegrid": "^4.13.1",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

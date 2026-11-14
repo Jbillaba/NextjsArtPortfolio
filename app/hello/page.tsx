@@ -4,14 +4,15 @@ import sabinePortrait from '@/public/assets/sabineportrait.png'
 export default function Page() {
 
     return (
-        <div>
-            <div>
+      <div className='flex flex-row space-y-10' >
+            <div className="px-10" >
                 <Image src={sabinePortrait}
-                alt="self portrait of Andreia de matos"
-
+                  alt="self portrait of Andreia de matos"
+                  width={800}
+                  height={800}
                 />
             </div>
-            <div>
+            <div className="space-y-5" >
                 <p>
                     Andreia de Matos (b. 1997, Lisbon, Portugal) is a multi-disciplinary illustrator based in North New Jersey. They hold a BFA in Illustration with a Concentration in Theatre from the Maryland Institute College of Art. They have worked with local community business owners to create signage and illustrations for their shops.
                 </p>

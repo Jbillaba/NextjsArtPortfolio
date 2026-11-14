@@ -10,7 +10,7 @@ export default function SideNav() {
             className="mb-2 flex h-20 items-end justify-center rounded-md bg-blue-500 p-4 md:h-40"
             href="/"
         >
-            <div className="w-32 text-white md:w-40">
+            <div className="w-40 text-white md:w-80">
                 <SabineLogo />
             </div>
         </Link>
