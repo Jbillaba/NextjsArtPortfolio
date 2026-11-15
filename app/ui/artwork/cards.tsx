@@ -25,7 +25,6 @@ export default function ArtCards({ foodData, selectedData }) {
   return <MasonryInfiniteGrid
     className="container"
     gap={5}
-    width={250}
     ref={igRef}
   >
           {artworks?.map((artwork: Artwork) => (
@@ -37,7 +36,7 @@ export default function ArtCards({ foodData, selectedData }) {
                     alt={artwork.caption}
                     height={0}
                     width={250}
-                    className=""
+                    className="rounded-sm"
                     loading="eager"
                 />
                 </div>
