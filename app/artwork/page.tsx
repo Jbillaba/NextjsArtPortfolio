@@ -23,7 +23,7 @@ export default async function Page() {
     return (
         <div>
             <Suspense fallback={<ArtworkSkeleton />}>
-              <ArtCards foodData={ foodArt } selectedData={SelectedArt}  />
+              <ArtCards foodData={ foodArt } selectedData={ SelectedArt }/>
             </Suspense>
         </div>
     );

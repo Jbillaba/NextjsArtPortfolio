@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
 import { MasonryInfiniteGrid } from "@egjs/react-infinitegrid";
+import styles from '@/app/ui/artwork/cards.module.css';
 
 export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
@@ -23,19 +24,18 @@ export default function ArtCards({ foodData, selectedData }) {
   }, [selectedData])
 
   return <MasonryInfiniteGrid
-    className="container"
-    gap={5}
+    gap={7}
+    percentage={true}
     ref={igRef}
+    className="flex max-w-5xl"
   >
           {artworks?.map((artwork: Artwork) => (
-                <div key={artwork.id} className="grid gap-1">
-                <div className="">
-                </div>
+                <div key={artwork.id} className={styles.card}>
                     <Image
                     src={artwork.image}
                     alt={artwork.caption}
                     height={0}
-                    width={250}
+                    width={300}
                     className="rounded-sm"
                     loading="eager"
                 />
