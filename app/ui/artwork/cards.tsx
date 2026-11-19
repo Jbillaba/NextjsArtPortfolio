@@ -12,8 +12,6 @@ export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
   const igRef = React.useRef();
 
-  console.log(styles)
-
   let artworks = React.use(foodData);
 
   if (state != "Food Illustrations") {
@@ -34,7 +32,9 @@ export default function ArtCards({ foodData, selectedData }) {
   >
           {artworks?.map((artwork: Artwork) => (
                 <div key={artwork.id} className={styles.card} >
-                  <div className={styles.hiddenText} >
+                  <div className={styles.overlay} >
+
+                  <div className={styles.cardContent} >
                     <h1>{artwork.caption}</h1>
                   </div>
                     <Image
@@ -45,6 +45,7 @@ export default function ArtCards({ foodData, selectedData }) {
                     className="rounded-sm"
                     loading="eager"
                 />
+                  </div>
                 </div>
             ))}
       </MasonryInfiniteGrid >;
