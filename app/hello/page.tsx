@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import sabinePortrait from '@/public/assets/sabineportrait.png'
+import sabinePortrait from '@/public/assets/sabineportrait.png';
+import styles from '@/app/hello/hello.module.css';
 
 export default function Page() {
 
     return (
       <div className='flex flex-row space-y-10' >
-            <div className="px-10" >
+            <div className="px-10">
                 <Image src={sabinePortrait}
                   alt="self portrait of Andreia de matos"
                   width={800}

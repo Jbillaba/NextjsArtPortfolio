@@ -6,10 +6,13 @@ import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
 import { MasonryInfiniteGrid } from "@egjs/react-infinitegrid";
 import styles from '@/app/ui/artwork/cards.module.css';
+import { Staatliches } from 'next/font/google';
 
 export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
   const igRef = React.useRef();
+
+  console.log(styles)
 
   let artworks = React.use(foodData);
 
@@ -30,7 +33,10 @@ export default function ArtCards({ foodData, selectedData }) {
     className="flex max-w-5xl"
   >
           {artworks?.map((artwork: Artwork) => (
-                <div key={artwork.id} className={styles.card}>
+                <div key={artwork.id} className={styles.card} >
+                  <div className={styles.hiddenText} >
+                    <h1>{artwork.caption}</h1>
+                  </div>
                     <Image
                     src={artwork.image}
                     alt={artwork.caption}

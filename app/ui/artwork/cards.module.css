@@ -1,8 +1,11 @@
 .card {
-
+    transition: filter 1s;
+}
+ 
+.card:hover {
+    transform: scale(1.03);
+    filter: brightness(50%);
 }
 
-.card:hover {
-    outline: 2px;
-    outline-color: aqua;
+.hiddenText {
 }
