@@ -45,6 +45,7 @@ export default function ArtCards({ foodData, selectedData }) {
                     className="rounded-sm"
                     loading="eager"
                 />
+                
                   </div>
                 </div>
             ))}
