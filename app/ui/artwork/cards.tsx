@@ -32,9 +32,7 @@ export default function ArtCards({ foodData, selectedData }) {
   >
           {artworks?.map((artwork: Artwork) => (
                 <div key={artwork.id} className={styles.card} >
-                  <div className={styles.overlay} >
-
-                  <div className={styles.cardContent} >
+                  <div className={`${styles.cardContent} rounded-sm `} >
                     <h1>{artwork.caption}</h1>
                   </div>
                     <Image
@@ -45,9 +43,7 @@ export default function ArtCards({ foodData, selectedData }) {
                     className="rounded-sm"
                     loading="eager"
                 />
-                
                   </div>
-                </div>
             ))}
       </MasonryInfiniteGrid >;
 }
