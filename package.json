@@ -16,7 +16,8 @@
     "probe-image-size": "^7.4.0",
     "react": "19.3.0",
     "react-bootstrap": "^2.10.10",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "yet-another-react-lightbox": "^3.33.1"
   },
   "devDependencies": {
     "@egjs/infinitegrid": "^4.13.1",

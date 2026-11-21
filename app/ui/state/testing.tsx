@@ -1,22 +1,28 @@
 'use client';
 
-import React, {Children, useState} from "react";
-import { useGlobal } from "@/app/context/stateContext";
-import ToastShowcase from "./toasts";
-import Container from 'react-bootstrap/Container';
+import React from "react";
+import Button from 'react-bootstrap/Button'
+import Lightbox from "yet-another-react-lightbox";
+import SabineLogo from "../sabineLogo";
 
+
+// why dont we just cut the middleMan leave the css alone, and just use yet another react lightbox ??
 
 export default function StateUI() {
-  const {state, setState} = useGlobal()
-  const [show, toggleShow] = useState(true);
+  const [show, toggleShow] = React.useState(false);
 
   return (
-    <Container className="p-3" >
-      <Container className="p-5 bg-light rounded-3" >
-        <h1>State page bootstrap showcase</h1>
-      </Container>
-      <h2>Toasts , whatever the fuck that means</h2>
-      <ToastShowcase />
-    </Container>    
-  )
+    <>
+      <Button onClick={() => toggleShow(true)} > Open Lightbox </Button>
+    
+      <Lightbox 
+        open={show}
+        close={() => toggleShow(false)}
+        slides={[
+          { src: '/public/assets/sabineportrait.png'}
+        ]}
+      />
+    
+    </>
+  );
 }

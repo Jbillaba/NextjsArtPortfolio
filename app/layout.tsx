@@ -1,6 +1,7 @@
 'use client';
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'yet-another-react-lightbox/styles.css';
 import SideNav from '@/app/ui/SideNav/sidenav';
 import { Providers } from "./context/providers";
 
