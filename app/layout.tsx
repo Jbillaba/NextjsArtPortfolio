@@ -1,5 +1,6 @@
 'use client';
 import "./globals.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import SideNav from '@/app/ui/SideNav/sidenav';
 import { Providers } from "./context/providers";
 

@@ -1,22 +1,22 @@
 'use client';
 
+import React, {Children, useState} from "react";
 import { useGlobal } from "@/app/context/stateContext";
+import ToastShowcase from "./toasts";
+import Container from 'react-bootstrap/Container';
+
 
 export default function StateUI() {
   const {state, setState} = useGlobal()
+  const [show, toggleShow] = useState(true);
 
   return (
-    <>
-      <p>the state of global is {state}</p>
-
-      <div className='my-8 flex flex-wrap items-center gap-4' >
-        <button value={3} onClick={() => setState('food')} > click to set render to food </button>
-
-        <button value={4} onClick={() => setState('selected')} > click to set render to selected </button>
-
-        <button value={5} onClick={() => setState('something')} > click to set render to something </button>
-
-      </div>
-    </>
+    <Container className="p-3" >
+      <Container className="p-5 bg-light rounded-3" >
+        <h1>State page bootstrap showcase</h1>
+      </Container>
+      <h2>Toasts , whatever the fuck that means</h2>
+      <ToastShowcase />
+    </Container>    
   )
 }
