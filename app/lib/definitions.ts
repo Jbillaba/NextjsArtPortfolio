@@ -3,7 +3,7 @@
 
 export type Artwork = {
     id: string;
-    image: string;
+    src: string;
     caption: string;
 }
 

@@ -15,7 +15,7 @@ export default function ArtCards({ foodData, selectedData }) {
 
   const igRef = React.useRef();
 
-  let artworks = React.use(foodData);
+  let artworks: Artwork[] = React.use(foodData);
 
   if (state != "Food Illustrations") {
     artworks = React.use(selectedData)
@@ -29,6 +29,7 @@ export default function ArtCards({ foodData, selectedData }) {
 
   // figure out how to get the artwork array working with the lightbox data please 
 
+  console.log(index)
 
   return ( 
   <>
@@ -51,7 +52,7 @@ export default function ArtCards({ foodData, selectedData }) {
                       <h1>{artwork.caption}</h1>
                     </div>
                       <Image
-                      src={artwork.image}
+                      src={artwork.src}
                       alt={artwork.caption}
                       height={0}
                       width={300}
