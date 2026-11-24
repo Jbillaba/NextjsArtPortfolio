@@ -1,16 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
 
-/* card serves mostly as a wrapper */
 .card:hover { 
     position: relative;
     overflow: hidden;
     transform: scale(1.03);
-
-}
-
-/* the idea here is to make this cover the foreground of the card image and serve as a background for card content */
-.overlay{
-    
+    cursor: pointer;
 }
 
 .cardContent {

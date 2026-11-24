@@ -6,7 +6,9 @@ import { Artwork } from '@/app/lib/definitions';
 import { useGlobal } from '@/app/context/stateContext';
 import { MasonryInfiniteGrid } from "@egjs/react-infinitegrid";
 import styles from '@/app/ui/artwork/cards.module.css';
+import lightboxStyles from '@/app/ui/artwork/lightbox.module.css';
 import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
 
 export default function ArtCards({ foodData, selectedData }) {
   const { state, setState } = useGlobal();
@@ -27,41 +29,41 @@ export default function ArtCards({ foodData, selectedData }) {
     }
   }, [selectedData])
 
-  // figure out how to get the artwork array working with the lightbox data please 
-
-  console.log(index)
-
   return ( 
   <>
     <Lightbox
+      plugins={[Captions]}
+      controller={{closeOnBackdropClick: true}}
       slides={artworks}
       index={index}
       open={index >= 0}
       close={() => setIndex(-1)}
+      className={lightboxStyles.lightbox}
     />
     
     <MasonryInfiniteGrid
+      column={3}
       gap={7}
       percentage={true}
       ref={igRef}
-      className="flex max-w-5xl"
+      align='center'
     >
-            {artworks?.map((artwork: Artwork) => (
-                  <div key={artwork.id} className={styles.card}>
-                    <div className={`${styles.cardContent} rounded-sm `} onClick={() => setIndex(Number(artwork.id))} >
-                      <h1>{artwork.caption}</h1>
-                    </div>
-                      <Image
-                      src={artwork.src}
-                      alt={artwork.caption}
-                      height={0}
-                      width={300}
-                      className="rounded-sm"
-                      loading="eager"
-                  />
-                    </div>
-              ))}
-        </MasonryInfiniteGrid >;
+      {artworks?.map((artwork: Artwork) => (
+            <div key={artwork.id} className={styles.card}>
+              <div className={`${styles.cardContent} rounded-sm `} onClick={() => setIndex(Number(artwork.id))} >
+                <h1>{artwork.title}</h1>
+              </div>
+                <Image
+                src={artwork.src}
+                alt={artwork.title}
+                height={0}
+                width={300}
+                className="rounded-sm"
+                loading="eager"
+            />
+              </div>
+        ))}
+      </MasonryInfiniteGrid >;
   </>
   );
 };

@@ -2,9 +2,9 @@
 //describes the shape of the data and what data type each property should accept.
 
 export type Artwork = {
-    id: string;
-    src: string;
-    caption: string;
+  id: string;
+  src: string;
+  title: string;
 }
 
 export type Links = {
