@@ -34,6 +34,7 @@ export default function ArtCards({ foodData, selectedData }) {
     <Lightbox
       plugins={[Captions]}
       controller={{closeOnBackdropClick: true}}
+      captions={{descriptionTextAlign: 'end'}}
       slides={artworks}
       index={index}
       open={index >= 0}

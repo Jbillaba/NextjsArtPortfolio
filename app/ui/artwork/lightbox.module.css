@@ -1,8 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
 
-.lightbox {
+/* .lightbox {
     --yarl__color_backdrop: rgba(0, 0, 0, 0.8);
     --yarl__slide_title_font_weight: bold;
     --yarl__slide_title_font_size: 2rem; 
-    --yarl__slide_title_font_family: 'Roboto', sans-serif;;
+    --yarl__slide_title_font_family: 'Roboto', sans-serif;
+    --yarl__slide_description_font_weight: bold;
+    --yarl__slide_description_font_size: 2rem;
+    --yarl__slide_description_font_family: 'Roboto', sans-serif;
+} */
+
+.lightbox :global(.yarl__container) {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox :global(.yarl__slide_description_container) {
+}
+
+.lightbox :global(.yarl__slide_description) {
+    color: #FFFFF0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+.lightbox :global(.yarl__slide_title_container) {
+}
+
+.lightbox :global(.yarl__slide_title) {
+    color: #FFFFF0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
 }

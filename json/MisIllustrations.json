@@ -3,66 +3,85 @@
     
     "id":0,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39208835/original_6257cea170d863551ff76c1842cc2f68.jpg?1756746892?bc=0",
-    "title": "illustration for LFT: Australian Artbook"
+    "title": "illustration for LFT: Australian Artbook",
+    "description": "illustration for LFT: Australian Artbook"
+
   },
   {
     "id":1,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209448/original_de8d515eafa13d23758c4954a016aeb2.jpg?1756748186?bc=0",
-    "title": "As meninas de Nazare"
+    "title": "As meninas de Nazare",
+    "description": "As meninas de Nazare"
   },
   {
     "id":2,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39280985/original_058dbf041e91b3a5ea5921648dd32b82.jpg?1756942477?bc=0",
-    "title": "hannibal's dinner"
+    "title": "hannibal's dinner",
+    "description": "hannibal's dinner"
+
   },
   {
     "id":3,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209059/original_7b28b8262e5956d5a33d9b8ea16a02c3.jpg?1756747672?bc=0",
-    "title": "hot pot meals pants customization"
+    "title": "hot pot meals pants customization",
+    "description": "hot pot meals pants customization"
+
   },
   {
     "id":4,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39208930/original_de91a6bb5700bd213568a74e956c6c2a.jpg?1756747239?bc=0",
-    "title": "Hattie Canty for Teamsters Mobilize"
+    "title": "Hattie Canty for Teamsters Mobilize",
+    "description": "Hattie Canty for Teamsters Mobilize"
+
   },
   {
     "id":5,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39338290/original_9ae0ced9031221ecafc3a96084e6320d.jpg?1757122235?bc=0",
-    "title": "senhora de azores"
+    "title": "senhora de azores",
+    "description": "senhora de azores"
+
   },
   {
     "id":6,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209061/original_2c85a4aa1713e88e9444aa4c11c12b35.jpg?1756747676?bc=0",
-    "title": "mushroom meals pants customization"
+    "title": "mushroom meals pants customization",
+    "description": "mushroom meals pants customization"
+
   },
   {
     "id":7,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39208992/original_805a72595c49c104c74da88871244456.jpg?1756747352?bc=0",
-    "title": "Hiveswap Illustration"
+    "title": "Hiveswap Illustration",
+    "description": "Hiveswap Illustration"
   },
   {
     "id":8,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209063/original_a523853df39c6b48fc64d8896d18613b.jpg?1756747679?bc=0",
-    "title": "the devil wears nikes"
+    "title": "the devil wears nikes",
+    "description": "the devil wears nikes"
   },
   {
     "id":9,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209672/original_d351d756245b01f307daeea580a0f319.jpg?1756748428?bc=0",
-    "title": "oh-ho-ho~"
+    "title": "oh-ho-ho~",
+    "description": "oh-ho-ho~"
   },
   {
     "id":10,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209037/original_ba40eb116f610d4111d263e2dfa73ae6.jpg?1756747538?bc=0",
-    "title": "midday demon"
+    "title": "midday demon",
+    "description": "midday demon"
   },
   {
     "id":11,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39208820/original_7c0a6d9e278a8b72a24b06f9969fbc30.jpg?1756746805?bc=0",
-    "title": ""
+    "title": "",
+    "description": ""
   },
   {
     "id":12,
     "src": "https://d2w9rnfcy7mm78.cloudfront.net/39209043/original_3d65b857bd8453988b5328f871bd9072.jpg?1756747607?bc=0",
-    "title": "vases"
+    "title": "vases",
+    "description": "vases"
   }
 ]
