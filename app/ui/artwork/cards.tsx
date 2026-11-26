@@ -32,7 +32,6 @@ export default function ArtCards({ foodData, selectedData }) {
   return ( 
   <>
     <Lightbox
-      plugins={[Captions]}
       controller={{closeOnBackdropClick: true}}
       captions={{descriptionTextAlign: 'end'}}
       slides={artworks}
@@ -40,6 +39,12 @@ export default function ArtCards({ foodData, selectedData }) {
       open={index >= 0}
       close={() => setIndex(-1)}
       className={lightboxStyles.lightbox}
+      render={{
+        slideFooter: ({ slide }) => (
+          <p style={{ color: "#fff", textAlign: "justify", fontSize: "2rem", margin: "1rem"}} 
+           > {slide.title} </p>
+        )
+      }}
     />
     
     <MasonryInfiniteGrid

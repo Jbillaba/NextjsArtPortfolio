@@ -4,6 +4,7 @@
 export type Artwork = {
   id: string;
   src: string;
+  title: string;
   description: string;
 }
 
